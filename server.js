@@ -92,8 +92,6 @@ app.get('/test', (request, response)=>{
     enchantclick(request, response)
 })
 
-
-
 app.listen(8080, () => {
     console.log("listening to http://localhost:8080");
 });
