@@ -21,6 +21,7 @@ app.use(session({
 }))
 
 
+
 app.get('/', (request, response) => {
 
     response.render('pages/index', {test:'index'})
@@ -97,21 +98,18 @@ app.get('/transcandes' , (request,response)=>{
 
 app.get('/Naissance_du_monde_erudit' , (request,response)=>{
 
-
-
     console.log("listening Naissance_du_monde_erudit"); 
     tests = 2
     response.render('pages/Naissance_du_monde_erudit',)
 
 })
 
-
-
-
 app.get('/test', (request, response)=>{
 
     enchantclick(request, response)
 })
+
+
 
 
 
@@ -133,23 +131,17 @@ app.post('/generateur.1', (request, response)=>{
 
 })
 
-
-
 app.post('/Races', (request, response)=>{ 
 
     response.redirect('/Races')
 
 })
 
-
-
 app.post('/Royaumes', (request, response)=>{
 
     response.redirect('/Royaumes')
 
 })
-
-
 
 app.post('/Premier_Dieux', (request, response)=>{
 
@@ -174,15 +166,11 @@ app.post('/transcandes', (request, response)=>{
 
 })
 
-
-
 app.post('/Guildes', (request, response)=>{
 
     response.redirect('/Guildes')
 
 })
-
-
 
 app.post('/Naissance_du_monde_erudit', (request, response)=>{
 
