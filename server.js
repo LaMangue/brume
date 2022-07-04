@@ -6,13 +6,11 @@ var session = require('express-session')
 
 
 app.set('view engine','ejs');
-
+app.set('trust proxy', 1) // trust first proxy
 
 app.use('/assets', express.static('public'))
 app.use(express.json())
 app.use(express.urlencoded({ extended: true }))
-
-app.set('trust proxy', 1) // trust first proxy
 app.use(session({
   secret: 'mangue',
   resave: false,
@@ -20,24 +18,9 @@ app.use(session({
   cookie: { secure: false }
 }))
 
-
-
 app.get('/', (request, response) => {
 
     response.render('pages/index', {test:'index'})
-})
-
-app.get('/generateur.1' , (request,response)=>{
-
-    //if(request.session.error){
-        //response.locals.eror = request.session.error;
-        //request.session.error = undefined;
-   // }
-
-    console.log("listening generateur"); 
-    tests = 2
-    response.render('pages/generateur1',)
-
 })
 
 app.get('/Races' , (request,response)=>{
@@ -107,75 +90,6 @@ app.get('/Naissance_du_monde_erudit' , (request,response)=>{
 app.get('/test', (request, response)=>{
 
     enchantclick(request, response)
-})
-
-
-
-
-
-app.post('/generateur.1', (request, response)=>{
-
-    if(request.body.enchant === undefined || request.body.enchant === ''){
-
-        response.redirect('/generateur.1')
-
-        // response.render('pages/generateur1', {error:"Vous n'avez pas défini la quantité :c"})
-        //console.log("Vous n'avez pas défini la quantité :c")
-        // tests = " "
-    }
-    if(request.body.enchant < 10 || request.body.enchant > 1 ){
-        response.render('pages/generateur1', {succes:"enchantement !"})
-        console.log("Il faut un nombre entier entre 1 et 10")
-        tests = "1"
-    }
-
-})
-
-app.post('/Races', (request, response)=>{ 
-
-    response.redirect('/Races')
-
-})
-
-app.post('/Royaumes', (request, response)=>{
-
-    response.redirect('/Royaumes')
-
-})
-
-app.post('/Premier_Dieux', (request, response)=>{
-
-    response.redirect('/Premier_Dieux')
-
-})
-app.post('/Dieux_Dechus', (request, response)=>{
-
-    response.redirect('/Dieux_Dechus')
-
-})
-
-app.post('/Dieux', (request, response)=>{
-
-    response.redirect('/Dieux')
-
-})
-
-app.post('/transcandes', (request, response)=>{
-
-    response.redirect('/transcandes')
-
-})
-
-app.post('/Guildes', (request, response)=>{
-
-    response.redirect('/Guildes')
-
-})
-
-app.post('/Naissance_du_monde_erudit', (request, response)=>{
-
-    response.redirect('/Naissance_du_monde_erudit')
-
 })
 
 
