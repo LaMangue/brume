@@ -41,8 +41,6 @@ app.get('/generateur.1' , (request,response)=>{
 
 app.get('/Races' , (request,response)=>{
 
-
-
     console.log("listening Races"); 
     tests = 2
     response.render('pages/Races',)
@@ -50,8 +48,6 @@ app.get('/Races' , (request,response)=>{
 })
 
 app.get('/Royaumes' , (request,response)=>{
-
-
 
     console.log("listening Royaumes"); 
     tests = 2
@@ -61,8 +57,6 @@ app.get('/Royaumes' , (request,response)=>{
 
 app.get('/Premier_Dieux' , (request,response)=>{
 
-
-
     console.log("listening Premier_Dieux"); 
     tests = 2
     response.render('pages/Premier_Dieux',)
@@ -70,8 +64,6 @@ app.get('/Premier_Dieux' , (request,response)=>{
 })
 
 app.get('/Guildes' , (request,response)=>{
-
-
 
     console.log("listening Guildes"); 
     tests = 2
@@ -81,8 +73,6 @@ app.get('/Guildes' , (request,response)=>{
 
 app.get('/Dieux_Dechus' , (request,response)=>{
 
-
-
     console.log("listening Dieux_Dechus"); 
     tests = 2
     response.render('pages/Dieux_Dechus',)
@@ -91,8 +81,6 @@ app.get('/Dieux_Dechus' , (request,response)=>{
 
 app.get('/Dieux' , (request,response)=>{
 
-
-
     console.log("listening Dieux"); 
     tests = 2
     response.render('pages/Dieux',)
@@ -100,8 +88,6 @@ app.get('/Dieux' , (request,response)=>{
 })
 
 app.get('/transcandes' , (request,response)=>{
-
-
 
     console.log("listening transcandes"); 
     tests = 2
@@ -133,12 +119,7 @@ app.post('/generateur.1', (request, response)=>{
 
     if(request.body.enchant === undefined || request.body.enchant === ''){
 
-        
-        
-       
-
         response.redirect('/generateur.1')
-
 
         // response.render('pages/generateur1', {error:"Vous n'avez pas défini la quantité :c"})
         //console.log("Vous n'avez pas défini la quantité :c")
@@ -156,8 +137,7 @@ app.post('/generateur.1', (request, response)=>{
 
 app.post('/Races', (request, response)=>{ 
 
-        response.redirect('/Races')
-
+    response.redirect('/Races')
 
 })
 
@@ -165,8 +145,7 @@ app.post('/Races', (request, response)=>{
 
 app.post('/Royaumes', (request, response)=>{
 
-
-        response.redirect('/Royaumes')
+    response.redirect('/Royaumes')
 
 })
 
@@ -174,33 +153,24 @@ app.post('/Royaumes', (request, response)=>{
 
 app.post('/Premier_Dieux', (request, response)=>{
 
-
-        response.redirect('/Premier_Dieux')
-
-
+    response.redirect('/Premier_Dieux')
 
 })
 app.post('/Dieux_Dechus', (request, response)=>{
 
-
-        response.redirect('/Dieux_Dechus')
-
+    response.redirect('/Dieux_Dechus')
 
 })
 
 app.post('/Dieux', (request, response)=>{
 
-
     response.redirect('/Dieux')
-
 
 })
 
 app.post('/transcandes', (request, response)=>{
 
-
-        response.redirect('/transcandes')
-
+    response.redirect('/transcandes')
 
 })
 
@@ -208,7 +178,7 @@ app.post('/transcandes', (request, response)=>{
 
 app.post('/Guildes', (request, response)=>{
 
-        response.redirect('/Guildes')
+    response.redirect('/Guildes')
 
 })
 
