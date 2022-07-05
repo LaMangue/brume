@@ -2,8 +2,8 @@ const header = document.getElementById("header");
 const footer = document.getElementById("footer");
 const main = document.getElementById("main");
 
-header.innerHTML = readTextFile("/components/header.html");
-footer.innerHTML = readTextFile("/components/footer.html");
+header.innerHTML = readTextFile("./components/header.html");
+footer.innerHTML = readTextFile("./components/footer.html");
 
 function readTextFile(file) {
   let output = "";
@@ -31,7 +31,7 @@ for (link of router_links) {
 
 setPage("naissance_du_monde_erudit");
 function setPage(path) {
-const html = readTextFile(`../views/${path}.html`);
+const html = readTextFile(`./views/${path}.html`);
     main.innerHTML = html;
 
 }
