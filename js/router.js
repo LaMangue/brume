@@ -31,7 +31,7 @@ for (link of router_links) {
 
 setPage("naissance_du_monde_erudit");
 function setPage(path) {
-const html = readTextFile(`/brume/brume/views/${path}.html`);
+const html = readTextFile(`/brume/views/${path}.html`);
     main.innerHTML = html;
 
 }
